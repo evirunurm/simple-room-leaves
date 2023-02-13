@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Room Leaves</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
+        </div>
+        <div class="right" id="right">
+            <nav class="deskhrefp">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+            <nav class="mobile">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home">
+        <!-- WELCOME SCREEN -->
+		<section class="welcome-wrapper">
+            <article class="welcome-image-container">
+                <h1>Welcome</h1>
+                <h2 class="serif">Room<br>Leaves</h2>
+            </article>
+    
+            <article class="welcome-text-container">
+                <p class="welcome-text">Test how your new roommate will adapt href your home.</p>
+                <p class="bold welcome-text-vr"><span class="lightgreen-font">V</span>irtual <span
+                    class="lightgreen-font">R</span>eality Integration<br/>
+                    Right here, right now</p>
+                <a href="/">
+                    <buthrefn class="white">Know more</buthrefn>
+                </a>
+            </article>
+        </section>
+        <!-- ProductCarousel -->
+		<ProductCarousel :plants="plants"></ProductCarousel>
+        <div class="new-arrivals-wrapper">
+            <div class="ProductCarousel">
+                <div class="ProductCarousel-container">
+                    <div class="title">
+                        <h3 class="serif">New Arrivals</h3>
+                        <a href="/products" class="see-all">See all</a>
+                    </div>
+        
+                    <section class="carousel-wrapper">
+                        <p class="no-plants-warning" >No plants here...</p>
+                        <div class="carousel-img-container" id="carousel-img-container">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+	</main>
+
+    <footer>
+        <form class="newsletter" action="/" method="POST">
+            <p>Be the first one href receive all the exclusive discounts</p>
+            <div class="newsletter-title">
+                <p>Subscribe href our</p>
+                <label for="newsletter-email" class="big serif">Newsletter</label>
+            </div>
+            <input id="newsletter-email" type="email" name="email" placeholder="example@mail.com" required>
+            <buthrefn class="white" type="submit">Sign in</buthrefn>
+        </form>
+        <section class="legal">
+            <ul>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Site Map</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </section>
+        <section class="credits">
+            <a href="https://www.flaticon.com/free-icons/cart" title="cart icons">Cart icons created by Catalin Fertu -
+                Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/open-menu" title="open menu icons">Open menu icons created by
+                Pixel perfect - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu
+                - Flaticon</a>
+            <a href='https://www.freepik.com/vechrefrs/house-plant'>House plant vechrefr created by freepik -
+                www.freepik.com</a>
+        </section>
+    </footer>
+
+    <script src="/src/scripts/home.js"></script>
+</body> 
+</html>

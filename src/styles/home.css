@@ -1,0 +1,204 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+.new-arrivals-wrapper {
+	width: calc(100% - var(--general-margin) * 2);
+	margin: 0 var(--general-margin);
+}
+
+/* ExploreCategories */
+
+h2 {
+	border: none;
+}
+h1 {
+	margin: 0;
+}
+h1, h2 {
+	border-bottom: none;
+	padding-bottom: 0;
+	font-weight: 500;
+}
+h2 {
+	margin-bottom: 0;
+}
+.welcome-wrapper {
+	width: 100%;
+	padding: 0 0 5rem 0;
+	/*	height: calc(100vh - 300px);*/
+}
+.welcome-image-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 5rem 0;
+	position: relative;
+}
+/* Left and right leaf */
+.welcome-image-container:before, .welcome-image-container:after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 30%;
+	max-width: 300px;
+	top: 0;
+	transition: 0.5s ease-out;
+	filter: drop-shadow(10px 20px 20px rgba(0, 0, 0, 0.35));
+}
+/* Left leaf */
+.welcome-image-container:before {
+	left: 0;
+	background: url("../assets/leaf-left.png");
+	background-repeat: no-repeat;
+	background-position-x: -70px;
+	background-size: 90%;
+}
+/* Right leaf */
+.welcome-image-container:after {
+	right: 0;
+	background: url("../assets/leaf-right.png");
+	background-repeat: no-repeat;
+	background-position-x: 100px;
+	background-size: 100%;
+}
+.welcome-image-container h1 {
+	font-size: 3rem;
+	font-weight: lighter;
+	border-bottom: 2px solid black;
+	margin-bottom: 0.15em;
+	width: calc(100% - (50% - 100px)); /* Full size minus the amount I'll be moving the title to the right (left property of ".welcome-image-container > *") */
+}
+.welcome-image-container h2 {
+	font-size: 4rem;
+	font-weight: normal;
+	line-height: 90%;
+}
+.welcome-image-container > * {
+	position: relative;
+	left: 50%;
+	transform: translateX(-100px);
+}
+/* Text Container */
+.welcome-text-container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75em;
+}
+.welcome-text {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	max-width: 380px;
+}
+.welcome-text-vr {
+	font-size: 1.3rem;
+}
+.white {
+	max-width: 350px;
+	min-width: 100px;
+	margin-top: 2em;
+	border: 2px solid var(--darkgreen);
+	width: 50vw;
+	transition: 0.2s ease-out;
+}
+@media (max-width: 655px) {
+	.welcome-image-container:before, .welcome-image-container:after {
+		background-size: 150px;
+	}
+	.welcome-image-container:before {
+		background-position-x: -70px;
+	}
+	.welcome-image-container:after {
+		background-position-x: 150px;
+	}
+	.welcome-image-container {
+		padding: 3rem 0;
+	}
+	.welcome-text {
+		font-size: 1.2rem;
+		font-weight: lighter;
+		max-width: 380px;
+		margin: 0 1em;
+	}
+	.welcome-text-vr {
+		margin: 0 1em;
+		font-size: 1rem;
+	}
+	.welcome-wrapper {
+		padding-bottom: 2rem;
+	}
+	button.white {
+		margin-top: 1.5rem;
+	}
+}
+
+/* LATEST PLANTS */
+.PlantImage {
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	text-align: center;
+	display: grid;
+	place-content: center;
+	color: white;
+	transition: 0.2s ease-out;
+}
+.overlay:hover {
+	opacity: 1;
+}
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.plant-stock {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: white;
+	border-radius: 20px;
+	margin: 0.75rem; /* SAME AS HEART */
+}
+.plant-stock:before {
+	content: "OUT OF STOCK";
+	font-size: 1rem;
+	padding: 0.15rem 0.75rem;
+	border-radius: 20px;
+	background: black;
+	opacity: 0.5;
+}
+@media (max-width: 400px) {
+	.plant-stock {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: white;
+		margin: 0.5rem; /* SAME AS HEART */
+	}
+	.plant-stock:before {
+		background: black;
+		content: "NO STOCK";
+		font-size: 0.6rem;
+		padding: 0.1rem 0.5rem;
+	}
+}
+
+.carousel-img-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
