@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>Room Leaves</title>
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/categories.css">
+    <title>Categories</title>
 </head>
 <body>
     <header>
@@ -26,40 +26,13 @@
         </div>
     </header>
 
-    <main class="home">
-        <!-- WELCOME SCREEN -->
-		<section class="welcome-wrapper">
-            <article class="welcome-image-container">
-                <h1>Welcome</h1>
-                <h2 class="serif">Room<br>Leaves</h2>
-            </article>
-    
-            <article class="welcome-text-container">
-                <p class="welcome-text">Test how your new roommate will adapt href your home.</p>
-                <p class="bold welcome-text-vr"><span class="lightgreen-font">V</span>irtual <span
-                    class="lightgreen-font">R</span>eality Integration<br/>
-                    Right here, right now</p>
-                <a href="/">
-                    <buthrefn class="white">Know more</buthrefn>
-                </a>
-            </article>
-        </section>
-        <!-- ProductCarousel -->
-		<ProductCarousel :plants="plants"></ProductCarousel>
-        <div class="new-arrivals-wrapper">
-            <div class="ProductCarousel">
-                <div class="ProductCarousel-container">
-                    <div class="title">
-                        <h3 class="serif">New Arrivals</h3>
-                        <a href="/products" class="see-all">See all</a>
-                    </div>
-                    <section class="carousel-wrapper">
-                        <div class="carousel-img-container" id="carousel-img-container">
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
+    <main class="categories">
+		<div class="categories-deco">
+			<img class="categories-deco-img" src="../assets/decoration/cork_plants.png" alt="">
+		</div>
+		<h1 class="serif categories-title">Categories</h1>
+		<section id="categoriesWrapper" class="categories-wrapper">
+		</section>
 	</main>
 
     <footer>
@@ -93,6 +66,6 @@
         </section>
     </footer>
 
-    <script src="/src/scripts/home.js"></script>
-</body> 
+    <script src="/src/scripts/categories.js"></script>
+</body>
 </html>

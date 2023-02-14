@@ -3,12 +3,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/product.css">
-    <title>Plant View</title>
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/products.css">
+    <title>All Plants</title>
 </head>
 <body>
-
     <header>
         <div class="logo">
             <a href="/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
@@ -26,40 +25,20 @@
             </nav>
         </div>
     </header>
-    <main class="product">
-		<h1 id="plantName" class="serif"></h1>
-		<section class="plant-main">
-			<!-- <PlantImage :plant-name="plant.name" :can-be-favorite="true" class="plant-image" :stock="true"
-							:clickable="false"
-							:plantId="plantId"></PlantImage> -->
-			<div class="plant-data">
-				<div class="plant-values">
-					<p id="plantPrice" class="plant-price"></p>
-				</div>
-			</div>
-		</section>
-		<section class="plant-about">
-			<h2 id="plantAboutTitle"></h2>
-			<article>
-				<p id="plantDescription"></p>
-				<div class="plant-stats">
-					<div class="plant-stat">
-						<div class="plant-stat-name">
-							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M5.01453 17.0001L1.51453 13.8001M5.01453 1.00012L5.01453 17.0001L5.01453 1.00012ZM5.01453 1.00012L8.51453 4.20012L5.01453 1.00012ZM5.01453 1.00012L1.51453 4.20012L5.01453 1.00012ZM5.01453 17.0001L8.51453 13.8001L5.01453 17.0001Z"
-									stroke="#104547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-
-							<p>Height</p>
-						</div>
-						<p id="plantHeight" class="plant-stat-data"></p>
-					</div>
-				</div>
-			</article>
-
+    <main class="products-container">
+        <div class="container">
+            <div id="carouselWrapper" class="wrapper">
+                <div class="img-container">
+                    <img src="assets/ads/img1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- PLANTS -->
+        <h1>Plants</h1>
+		<section id="productsWrapper" class="products-wrapper --grid">
 		</section>
 	</main>
+
     <footer>
         <form class="newsletter" action="/" method="POST">
             <p>Be the first one href receive all the exclusive discounts</p>
@@ -91,6 +70,6 @@
         </section>
     </footer>
 
-    <script src="/src/scripts/product.js"></script>
+    <script src="/src/scripts/products.js"></script>
 </body>
 </html>

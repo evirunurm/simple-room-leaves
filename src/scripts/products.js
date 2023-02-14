@@ -1,19 +1,18 @@
-// CONSTANTS
-const maxAmount = 2;
+// productsWrapper
 
 const fetchPlants = async () => {
     try {
         let response = await fetch( "https://simple-room-leaves-api.vercel.app/api/plants")
-        return (await response.json()).slice(0, maxAmount);
+        return await response.json();
     } catch (err) {
         console.log("Error: " + err)
     }
 }
 
 
-const loadLatestPlants = (plants) => {
+const loadAllPlants = (plants) => {
     console.log(plants)
-    const latestElement = document.getElementById('carousel-img-container');
+    const latestElement = document.getElementById('productsWrapper');
     let element;
 
     plants.forEach(plant => {
@@ -41,7 +40,7 @@ const loadLatestPlants = (plants) => {
 async function main() {
     let recentPlants = await fetchPlants();
     // Llamar a la carga del "Latest" element
-    loadLatestPlants(recentPlants);
+    loadAllPlants(recentPlants);
 }
 
 

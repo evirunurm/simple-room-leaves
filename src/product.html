@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/product.css">
+    <title>Plant View</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
+        </div>
+        <div class="right" id="right">
+            <nav class="deskhrefp">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+            <nav class="mobile">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+            </nav>
+        </div>
+    </header>
+    <main class="product">
+		<h1 id="plantName" class="serif"></h1>
+		<section class="plant-main">
+            <div class="plant-image">
+                <img id="plantImage" src="" alt="Image of the plant in 3D">
+            </div>
+			<div class="plant-data">
+				<div class="plant-values">
+					<p id="plantPrice" class="plant-price"></p>
+                    <p id="plantStock" class="plant-stat-name"></p>
+				</div>
+			</div>
+		</section>
+		<section class="plant-about">
+			<h2 id="plantAboutTitle"></h2>
+			<article>
+				<p id="plantDescription"></p>
+				<div class="plant-stats">
+					<div class="plant-stat">
+						<div class="plant-stat-name">
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M5.01453 17.0001L1.51453 13.8001M5.01453 1.00012L5.01453 17.0001L5.01453 1.00012ZM5.01453 1.00012L8.51453 4.20012L5.01453 1.00012ZM5.01453 1.00012L1.51453 4.20012L5.01453 1.00012ZM5.01453 17.0001L8.51453 13.8001L5.01453 17.0001Z"
+									stroke="#104547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<p>Height</p>
+						</div>
+						<p id="plantHeight" class="plant-stat-data"></p>
+					</div>
+                    <div class="plant-stat">
+						<div class="plant-stat-name">
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M5.01453 17.0001L1.51453 13.8001M5.01453 1.00012L5.01453 17.0001L5.01453 1.00012ZM5.01453 1.00012L8.51453 4.20012L5.01453 1.00012ZM5.01453 1.00012L1.51453 4.20012L5.01453 1.00012ZM5.01453 17.0001L8.51453 13.8001L5.01453 17.0001Z"
+									stroke="#104547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<p>Humidity</p>
+						</div>
+						<p id="plantHumidity" class="plant-stat-data"></p>
+					</div>
+                    <div class="plant-stat">
+						<div class="plant-stat-name">
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M5.01453 17.0001L1.51453 13.8001M5.01453 1.00012L5.01453 17.0001L5.01453 1.00012ZM5.01453 1.00012L8.51453 4.20012L5.01453 1.00012ZM5.01453 1.00012L1.51453 4.20012L5.01453 1.00012ZM5.01453 17.0001L8.51453 13.8001L5.01453 17.0001Z"
+									stroke="#104547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<p>Temperature</p>
+						</div>
+						<p id="plantTemperature" class="plant-stat-data"></p>
+					</div>
+				</div>
+			</article>
+
+		</section>
+	</main>
+    <footer>
+        <form class="newsletter" action="/" method="POST">
+            <p>Be the first one href receive all the exclusive discounts</p>
+            <div class="newsletter-title">
+                <p>Subscribe href our</p>
+                <label for="newsletter-email" class="big serif">Newsletter</label>
+            </div>
+            <input id="newsletter-email" type="email" name="email" placeholder="example@mail.com" required>
+            <buthrefn class="white" type="submit">Sign in</buthrefn>
+        </form>
+        <section class="legal">
+            <ul>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Site Map</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </section>
+        <section class="credits">
+            <a href="https://www.flaticon.com/free-icons/cart" title="cart icons">Cart icons created by Catalin Fertu -
+                Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/open-menu" title="open menu icons">Open menu icons created by
+                Pixel perfect - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu
+                - Flaticon</a>
+            <a href='https://www.freepik.com/vechrefrs/house-plant'>House plant vechrefr created by freepik -
+                www.freepik.com</a>
+        </section>
+    </footer>
+
+    <script src="/src/scripts/product.js"></script>
+</body>
+</html>

@@ -15,11 +15,16 @@ const fetchPlant = async () => {
 
 
 const loadPlant = (plant) => {
-    document.getElementById('plantName').textContent = plant.name;
-    document.getElementById('plantPrice').textContent = plant.price + '€';
-    document.getElementById('plantAboutTitle').textContent = 'About ' + plant.name;
-    document.getElementById('plantDescription').textContent = plant.description;
-    document.getElementById('plantHeight').textContent = plant.height * 100 + 'cm';
+    // Rellenar los elementos de la página con los datos, teniendo en cuenta que alguna puede venir en blanco.
+    document.getElementById('plantName').textContent = plant.name ?? '';
+    document.getElementById('plantPrice').textContent = plant.price ?? '';
+    document.getElementById('plantStock').textContent = (plant.stock  ?? '') + ' plants left in stock';
+    document.getElementById('plantAboutTitle').textContent = 'About ' + plant.name ?? '';
+    document.getElementById('plantDescription').textContent = plant.description ?? '';
+    document.getElementById('plantHeight').textContent = (plant.height ?? '') * 100 + 'cm';
+    document.getElementById('plantHumidity').textContent = plant.humidity ?? '' + '%' ;
+    document.getElementById('plantTemperature').textContent = (plant.temperature ?? '') + 'ºC';
+    document.getElementById('plantImage').src = "../public/plants/plant_" + plant.name.toLowerCase().split(" ").join("") + ".png";
 }
 
 async function main() {
