@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
+            <a href="/src/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
         </div>
         <div class="right" id="right">
             <nav class="deskhrefp">
@@ -35,23 +35,30 @@
             </article>
     
             <article class="welcome-text-container">
-                <p class="welcome-text">Test how your new roommate will adapt href your home.</p>
+                <p class="welcome-text">Test how your new roommate will adapt to your home.</p>
                 <p class="bold welcome-text-vr"><span class="lightgreen-font">V</span>irtual <span
                     class="lightgreen-font">R</span>eality Integration<br/>
                     Right here, right now</p>
-                <a href="/">
-                    <buthrefn class="white">Know more</buthrefn>
+                <a href="/src/">
+                    <button class="white">Know more</button>
                 </a>
             </article>
         </section>
-        <!-- ProductCarousel -->
-		<ProductCarousel :plants="plants"></ProductCarousel>
+
+        <!-- SUMMARY -->
+        <section id="summerySection">
+            <p class="welcome-text">How many clients trust us?</p>
+            <div id="summaryContainer" class="summary-container">
+            </div>
+        </section>
+
+        <!-- LASTEST PLANTS -->
         <div class="new-arrivals-wrapper">
             <div class="ProductCarousel">
                 <div class="ProductCarousel-container">
                     <div class="title">
                         <h3 class="serif">New Arrivals</h3>
-                        <a href="/products" class="see-all">See all</a>
+                        <a href="/src/products.html" class="see-all">See all</a>
                     </div>
                     <section class="carousel-wrapper">
                         <div class="carousel-img-container" id="carousel-img-container">
@@ -63,14 +70,14 @@
 	</main>
 
     <footer>
-        <form class="newsletter" action="/" method="POST">
-            <p>Be the first one href receive all the exclusive discounts</p>
+        <form class="newsletter" action="/src/" method="POST">
+            <p>Be the first one to receive all the exclusive discounts</p>
             <div class="newsletter-title">
-                <p>Subscribe href our</p>
+                <p>Subscribe to our</p>
                 <label for="newsletter-email" class="big serif">Newsletter</label>
             </div>
             <input id="newsletter-email" type="email" name="email" placeholder="example@mail.com" required>
-            <buthrefn class="white" type="submit">Sign in</buthrefn>
+            <button class="white" type="submit">Sign in</button>
         </form>
         <section class="legal">
             <ul>
@@ -88,7 +95,7 @@
                 Pixel perfect - Flaticon</a>
             <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu
                 - Flaticon</a>
-            <a href='https://www.freepik.com/vechrefrs/house-plant'>House plant vechrefr created by freepik -
+            <a href='https://www.freepik.com/vechrefrs/house-plant'>House plant vector created by freepik -
                 www.freepik.com</a>
         </section>
     </footer>

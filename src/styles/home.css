@@ -202,3 +202,35 @@ h2 {
     gap: 1.5rem;
 }
 
+/* SUMMARY ELEMENT */
+#summerySection {
+	background: var(--darkgreen);
+	padding: 2rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap:1rem;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+.summary-container {
+	background: white;
+	height: 350px;
+	width: 100%;
+	max-width: 900px;
+	padding: 2rem 1rem 0 1rem; 
+	display: flex;
+	justify-content: space-around;
+	gap: 1rem;
+	align-items: end;
+
+}
+
+/* SUMMARY BARS */
+.bar {
+	background: var(--darkgreen);
+	width: 100%; /* TIENE QUE SER DE TAMAÑO (100% / (CANTIDAD DE BARRAS - (GAP * 2 * CANTIDAD DE BARRAS)) ) */
+	position: relative;
+}

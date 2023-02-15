@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
+            <a href="/src/"><img src="./assets/logo.png" alt="Room Leaves logotype" height="48"></a>
         </div>
         <div class="right" id="right">
             <nav class="deskhrefp">
@@ -26,6 +26,7 @@
         </div>
     </header>
     <main class="products-container">
+        <!-- ADDS -->
         <div class="container">
             <div id="carouselWrapper" class="wrapper">
                 <div class="img-container">
@@ -33,21 +34,61 @@
                 </div>
             </div>
         </div>
-        <!-- PLANTS -->
+
         <h1>Plants</h1>
+
+        <!-- FILTRADO -->
+        <article class="sort-filter" id="sortFilterBox">
+            <div class="sort">
+                <select id="sortBy">
+                    <option selected disabled value="">Order by</option>
+                    <option value="height">Height</option>
+                    <option value="price">Price</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+            <div class="filter">
+                <p>Categories</p>
+                <!-- CATEGORIAS -->
+                <div id="categories">
+                    
+                </div>
+            </div>
+            <div class="filter">
+                <p>Price</p>
+                <div>
+                    <label id="priceValue" class="value">100€</label>
+                    <input id="price" @input="refreshFilter($event)" oninput="refreshPriceFilter(event)" class="filterInput"
+                            type="range" step="2" min="0" max="100" value="100">
+                </div>
+            </div>
+            <div class="filter">
+                <p>Height</p>
+                <div>
+                    <label id="heightValue" class="value">100cm</label>
+                    <input id="height" data-filter="height" oninput="refreshHeightFilter(event)" class="filterInput" v-model="heightFilter"
+                             type="range" step="0.1" min="0" :max="100" value="100">
+                </div>
+            </div>
+            <button class="white" id="filterButton" onclick="filter()">Filter</button>
+        </article>
+
+        <!-- PLANTS -->
+        
 		<section id="productsWrapper" class="products-wrapper --grid">
+            <!-- AQUI VAN LAS PLANTAS DE LA API -->
 		</section>
 	</main>
 
     <footer>
-        <form class="newsletter" action="/" method="POST">
-            <p>Be the first one href receive all the exclusive discounts</p>
+        <form class="newsletter" action="/src/" method="POST">
+            <p>Be the first one to receive all the exclusive discounts</p>
             <div class="newsletter-title">
-                <p>Subscribe href our</p>
+                <p>Subscribe to our</p>
                 <label for="newsletter-email" class="big serif">Newsletter</label>
             </div>
             <input id="newsletter-email" type="email" name="email" placeholder="example@mail.com" required>
-            <buthrefn class="white" type="submit">Sign in</buthrefn>
+            <button class="white" type="submit">Sign in</button>
         </form>
         <section class="legal">
             <ul>
@@ -65,7 +106,7 @@
                 Pixel perfect - Flaticon</a>
             <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Catalin Fertu
                 - Flaticon</a>
-            <a href='https://www.freepik.com/vechrefrs/house-plant'>House plant vechrefr created by freepik -
+            <a href='https://www.freepik.com/vectors/house-plant'>House plant vector created by freepik -
                 www.freepik.com</a>
         </section>
     </footer>

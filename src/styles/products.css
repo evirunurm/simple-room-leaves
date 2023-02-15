@@ -64,16 +64,15 @@ h1 {
 	place-items: center;
 }
 .sort-filter {
-	position: absolute;
-	bottom: 0;
-	transform: translateY(100%);
-	z-index: 100;
 	background: white;
 	border: 2px solid black;
 	padding: 0.75rem 1.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
+	width: 100%;
+	max-width: 500px;
+	margin-bottom: 2rem;
 }
 .filter > p {
 	font-weight: 500;
@@ -258,4 +257,10 @@ h1 {
 }
 .controller-button.--marked {
 	background: white;
+}
+
+.stock-text {
+	padding-top: 1rem;
+	font-size: small;
+	opacity: 70%;
 }

@@ -16,7 +16,6 @@ const loadCategories = (categories) => {
         // MAIN CATEGORY WRAPPER
         element = document.createElement("article");
         element.classList.add("category-container");
-        element.style.background = 'rgba(0,0,0,.7)';
 
         // CATEGORY WRAPPER
         cWEl = document.createElement("div");
