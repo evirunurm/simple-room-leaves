@@ -68,7 +68,17 @@ const loadLatestSummary = (days) => {
             width: 60px;
             left: 50%;
             transform: translate(-50%); /* PARA QUE SE CENTRE */
-        }`;
+        }
+        .${"bar" + day.date}:before {
+            content: '${day.date}';
+            position: absolute;
+            bottom: 0;
+            font-size: 0.5rem;
+            color: white;
+            width: 60px;
+            left: 22%;
+        }
+        `;
 
         document.head.appendChild(style);
         summaryElement.appendChild(barEl);

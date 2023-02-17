@@ -1,6 +1,7 @@
 
 
 let plants;
+let filteredPlants;
 
 function refreshPriceFilter(event) {
     const valueEl = document.getElementById('priceValue');
@@ -45,19 +46,19 @@ function filter() {
     categories = filterSelected(categories);
 
     // FILTER
-    plants = plants.filter(plant => {
+    filteredPlants = plants.filter(plant => {
         return plant.price <= price 
-        && plant.height <= height
+        && (plant.height * 100) <= height
         && categories.some((category) => category.id == plant.categoryId)
     })
     
     // ORDER PLANTS
     if (sortBy) {
-        plants.sort( (plant1, plant2) => plant2[sortBy] - plant1[sortBy])
+        filteredPlants.sort( (plant1, plant2) => plant2[sortBy] - plant1[sortBy])
     }
 
     // PRINT PLANTS
-    loadAllPlants(plants);
+    loadAllPlants(filteredPlants);
 }
 
 
@@ -134,6 +135,7 @@ const loadCategories = (categories) => {
 
 async function main() {
     plants = await fetchPlants();
+    filteredPlants = JSON.parse(JSON.stringify(plants));
     let categories = await fetchCategories();
 
     // Llamar a la carga del "Latest" element
